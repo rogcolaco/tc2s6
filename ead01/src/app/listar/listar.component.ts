@@ -9,7 +9,7 @@ import { WebService } from '../web.service';
 })
 export class ListarComponent implements OnInit {
 
-listaProdutos: Produto[];
+  listaProdutos: Produto[];
 
   constructor(private web : WebService) { }
 

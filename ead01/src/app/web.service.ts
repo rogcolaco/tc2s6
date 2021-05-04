@@ -11,7 +11,7 @@ export class WebService {
   baseURL = "https://banco-dados-teste.glitch.me/api";
 
   getProdutos() : Observable<Produto[]>{
-    return this.http.get<Produto[]>(this.baseURL+"/produtos");
+    return this.http.get<Produto[]>(this.baseURL + "/produtos");
   }
 
   constructor(private http : HttpClient) { }
