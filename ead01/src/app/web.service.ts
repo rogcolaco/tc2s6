@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from './Produto';
@@ -12,6 +12,14 @@ export class WebService {
 
   getProdutos() : Observable<Produto[]>{
     return this.http.get<Produto[]>(this.baseURL + "/produtos");
+  }
+
+  cadastrarProduto(produto: { title: string; price: number; description: string; }) : Observable<any>{
+    let body = new HttpParams();
+    body = body.set("title", produto.title);
+    body = body.set("price", String(produto.price));
+    body = body.set("description", produto.description);
+    return this.http.post(this.baseURL + "/produtos" , body, {observe: "response"});
   }
 
   constructor(private http : HttpClient) { }

@@ -1,1 +1,15 @@
-<p>cadastrar works!</p>
+<div>
+    <label>Título<br/>
+        <input [(ngModel)]="produto.title" placeholder="Título" />
+    </label>
+    <br/>
+    <label >Preço<br/>
+        <input [(ngModel)]="produto.price" placeholder="Preço" />
+    </label>
+    <br/>
+    <label>Descrição<br/>
+        <textarea [(ngModel)]="produto.description" placeholder="Descrição"></textarea>
+    </label> 
+    <br/>   
+    <button (click)="cadastrar()">Cadastro de Produto</button>
+</div>

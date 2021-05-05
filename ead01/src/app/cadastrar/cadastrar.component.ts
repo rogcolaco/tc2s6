@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ListarComponent } from '../listar/listar.component';
+import { WebService } from '../web.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -7,7 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
-  constructor() { }
+  produto = {
+    title: "",
+    price: 0.0,
+    description:""
+  };
+
+  constructor(private web : WebService) { }
+
+  cadastrar(){
+    this.web.cadastrarProduto(this.produto).subscribe( res => {
+      res.ok ? alert("Cadastro Realizado com Sucesso") : alert ("Cadastro não realizado");
+    });
+  }
 
   ngOnInit(): void {
   }
