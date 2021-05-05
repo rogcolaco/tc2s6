@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './listar/listar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
+import { AlterarComponent } from './alterar/alterar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    AlterarComponent
   ],
   imports: [
     BrowserModule,
