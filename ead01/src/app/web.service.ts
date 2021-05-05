@@ -22,5 +22,11 @@ export class WebService {
     return this.http.post(this.baseURL + "/produtos" , body, {observe: "response"});
   }
 
+  exluirProduto(produto : any) : Observable<any>{
+    /* let deleteBody = new HttpParams();
+    deleteBody = deleteBody.set("id", produto._id); */
+    return this.http.delete(this.baseURL + "/produtos/" + produto._id, {observe: "response"});
+  }
+
   constructor(private http : HttpClient) { }
 }

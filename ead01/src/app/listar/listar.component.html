@@ -1,18 +1,25 @@
 <div>
-    <table>
-        <thead>
-            <tr>
-                <td>Preço</td>
-                <td>Descrição</td>
-                <td>Título</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let p of listaProdutos">
-                <td>{{p.price}}</td>
-                <td>{{p.description}}</td>
-                <td>{{p.title}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <h1>Lista de Produtos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>Preço</td>
+                    <td>Descrição</td>
+                    <td>Título</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of listaProdutos">
+                    <td>{{p.price}}</td>
+                    <td>{{p.description}}</td>
+                    <td>{{p.title}}</td>
+                    <td><button>Alterar Produto</button></td>
+                    <td><button (click)="selecionaProduto(p)">Deletar Produto</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <app-deletar [produtoSelecionado] = "produtoSelecionado" *ngIf="produtoSelecionado.title  != ''"></app-deletar>
 </div>
