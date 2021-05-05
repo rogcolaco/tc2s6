@@ -20,6 +20,7 @@ export class CadastrarComponent implements OnInit {
   cadastrar(){
     this.web.cadastrarProduto(this.produto).subscribe( res => {
       res.ok ? alert("Cadastro Realizado com Sucesso") : alert ("Cadastro não realizado");
+      location.reload();
     });
   }
 
