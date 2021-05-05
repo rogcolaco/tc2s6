@@ -11,7 +11,17 @@ export class ListarComponent implements OnInit {
 
   listaProdutos: Produto[] = [];
 
-  produtoSelecionado : Produto = {
+  produtoDeletar : Produto = {
+    _id:  "",
+    title: "",
+    description: "",
+    price: 0.0,
+    createdAt: "",
+    updatedAt: "",
+    __v: 0
+  };
+
+  produtoAlterar : Produto = {
     _id:  "",
     title: "",
     description: "",
@@ -30,8 +40,13 @@ export class ListarComponent implements OnInit {
   }
 
   selecionaProduto(produto: Produto) : void{
-    this.produtoSelecionado = produto;
-    console.log(this.produtoSelecionado)
+    this.produtoDeletar = produto;
+    console.log(this.produtoDeletar)
+  }
+
+  selecionaAlteraProduto(produto: Produto) : void{
+    this.produtoAlterar = produto;
+    console.log(this.produtoDeletar)
   }
 
   ngOnInit(): void {

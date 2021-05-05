@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Produto } from '../Produto';
+import { WebService } from '../web.service';
 
 @Component({
   selector: 'app-alterar',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlterarComponent implements OnInit {
 
-  constructor() { }
+  @Input() produtoAlterar : Produto | undefined;
+
+  constructor( private web : WebService) { }
 
   ngOnInit(): void {
+  }
+
+  recarregar(): void{
+    alert("Operação Cancelada");
+    location.reload();
+  }
+
+  alterar(){
+    this.web.alterarProduto(this.produtoAlterar).subscribe( res => {
+      res.ok ? alert("Item alterado com Sucesso") : alert ("Erro ao alterar o item selecionado");
+      location.reload();
+    });
+
   }
 
 }

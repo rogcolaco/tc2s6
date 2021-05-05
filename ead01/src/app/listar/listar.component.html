@@ -14,12 +14,13 @@
                     <td>{{p.price}}</td>
                     <td>{{p.description}}</td>
                     <td>{{p.title}}</td>
-                    <td><button>Alterar Produto</button></td>
+                    <td><button (click)="selecionaAlteraProduto(p)">Alterar Produto</button></td>
                     <td><button (click)="selecionaProduto(p)">Deletar Produto</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <app-deletar [produtoSelecionado] = "produtoSelecionado" *ngIf="produtoSelecionado.title  != ''"></app-deletar>
+    <app-alterar [produtoAlterar] = "produtoAlterar" *ngIf="produtoAlterar.title  != ''"></app-alterar>
+    <app-deletar [produtoSelecionado] = "produtoDeletar" *ngIf="produtoDeletar.title  != ''"></app-deletar>
 </div>

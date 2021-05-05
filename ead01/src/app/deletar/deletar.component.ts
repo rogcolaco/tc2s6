@@ -21,7 +21,7 @@ export class DeletarComponent implements OnInit {
 
   excluir(){
     this.web.exluirProduto(this.produtoSelecionado).subscribe( res => {
-      res.ok ? alert("Item deletado com sucesso com Sucesso") : alert ("Erro ao deletar o item selecionado");
+      res.ok ? alert("Item deletado com Sucesso") : alert ("Erro ao deletar o item selecionado");
       location.reload();
     });
   }
