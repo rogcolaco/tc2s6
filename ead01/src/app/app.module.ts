@@ -8,13 +8,15 @@ import { ListarComponent } from './listar/listar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
 import { AlterarComponent } from './alterar/alterar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
     CadastrarComponent,
-    AlterarComponent
+    AlterarComponent,
+    DeletarComponent
   ],
   imports: [
     BrowserModule,
