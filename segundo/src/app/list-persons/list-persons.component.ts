@@ -9,7 +9,7 @@ import { RegisterService } from '../register.service';
 })
 export class ListPersonsComponent implements OnInit {
 
-  listPersons : Person[] = [];
+  listPersons : Person[] = this.regService.registerList;
 
   constructor(private regService : RegisterService) { }
 
@@ -19,7 +19,6 @@ export class ListPersonsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadList();
   }
 
 }

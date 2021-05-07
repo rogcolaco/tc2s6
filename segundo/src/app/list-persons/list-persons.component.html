@@ -2,6 +2,6 @@
     <h2>Menu</h2>
     <ul>
         <li>Cadastrar</li>
-        <li *ngIf="listPersons.length"></li>
+        <li *ngFor="let person of listPersons">{{person.name}}</li>
     </ul>
 </div>
