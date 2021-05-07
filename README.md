@@ -4,5 +4,6 @@ Tópicos da Computação 2 do curos de graduação em Análise e desenvolvimento
 
 # Sumário dos projetos
  :file_folder: primeiro: Projeto utilizado em aula para aprender conceitos básicos de Angular;  
+ :file_folder: segundo: Projeto utilizado em aula como atividade avaliativa;  
  :file_folder: ead01: Projeto desenvolvido como tarefa para o primeiro conteúdo EAD da disciplina;  
  :file_folder: prj-angular: Primeiro projeto desenvolvido como tarefa de fixação de conteúdo;  
