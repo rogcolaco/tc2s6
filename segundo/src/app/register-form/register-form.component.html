@@ -1,13 +1,14 @@
-<div *ngIf = "personSelected.name == ''">
+<div *ngIf = "personSelected.name == ''" class="form">
     <h2>Formulário de Cadastro de Pessoas</h2>
-    <label for="">Nome
-        <input type="text" [(ngModel)]="person.name">
+    <label for="">Nome <br/>
+        <input type="text" [(ngModel)]="person.name"><br/>
     </label>
-    <label for="">Idade
-        <input type="number" [(ngModel)]="person.age">
+    <label for="">Idade<br/>
+        <input type="number" [(ngModel)]="person.age"><br/>
     </label>
-    <label for="">Imagem
-        <input type="text" [(ngModel)]="person.image">
+    <label for="">Imagem<br/>
+        <input type="text" [(ngModel)]="person.image"><br/>
     </label>
+    <br/>
     <button (click)="register()">Cadastrar</button>
 </div>
