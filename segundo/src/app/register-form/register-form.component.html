@@ -1,0 +1,13 @@
+<div>
+    <h2>Formulário de Cadastro de Pessoas</h2>
+    <label for="">Nome
+        <input type="text" [(ngModel)]="person.name">
+    </label>
+    <label for="">Idade
+        <input type="number" [(ngModel)]="person.age">
+    </label>
+    <label for="">Imagem
+        <input type="text" [(ngModel)]="person.image">
+    </label>
+    <button (click)="register()">Cadastrar</button>
+</div>
