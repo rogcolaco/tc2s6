@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../Person';
 import { RegisterService } from '../register.service';
-import { ShowService } from '../show.service';
 
 @Component({
   selector: 'app-list-persons',
@@ -12,23 +11,15 @@ export class ListPersonsComponent implements OnInit {
 
   listPersons : Person[] = this.regService.registerList;
   
-  selectedPerson : Person = {
+  selectedPerson : Person;
+
+  newPerson : Person = {
     name:"",
     age:0,
     image:""
   }
 
-  newPerson : Person = {
-    name:"______________________",
-    age:0,
-    image:""
-  }
-
-  constructor(private regService : RegisterService, private showService : ShowService) { }
-
-  /*showRegister(){
-    this.showService.choseShow = "showRegister";
-  }*/
+  constructor(private regService : RegisterService) { }
 
   selected(person:Person){
     this.selectedPerson = person;
