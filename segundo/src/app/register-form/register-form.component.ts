@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Person } from '../Person';
 import { RegisterService } from '../register.service';
+import { ShowService } from '../show.service';
 
 @Component({
   selector: 'app-register-form',
@@ -9,13 +10,18 @@ import { RegisterService } from '../register.service';
 })
 export class RegisterFormComponent implements OnInit {
 
+  @Input()
+  personSelected!: Person;
+  
   person : Person = {
     name:"",
     age:0,
     image:""
   };
 
-  constructor(private regService : RegisterService) { }
+  /* isShow: String= this.showService.choseShow; */
+
+  constructor(private regService : RegisterService, private showService : ShowService) { }
 
   register(){
     if(this.regService.registerService(this.person)) {

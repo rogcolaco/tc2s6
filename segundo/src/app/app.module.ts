@@ -10,7 +10,7 @@ import { ListPersonsComponent } from './list-persons/list-persons.component';
   declarations: [
     AppComponent,
     RegisterFormComponent,
-    ListPersonsComponent
+    ListPersonsComponent,
   ],
   imports: [
     BrowserModule,
