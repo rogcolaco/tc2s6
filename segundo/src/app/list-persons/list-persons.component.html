@@ -2,9 +2,10 @@
     <h2>Menu</h2>
     <ul>
         <!-- <li (click) = "showRegister()">Cadastrar</li> -->
-        <li (click) = "selected(newPerson)">Cadastrar</li>
+        <li (click) = "selected(newPerson)" [class.selected] ="selectedPerson.name == ''">Cadastrar</li>
         <li *ngFor="let person of listPersons" 
-            (click) = "selected(person)">{{person.name}}</li>
+            (click) = "selected(person)"
+            [class.selected] ="person == selectedPerson">{{person.name}}</li>
     </ul>
     <app-register-form [personSelected] = "selectedPerson"></app-register-form>
     <app-show-person [personSelected] = "selectedPerson"></app-show-person>
