@@ -1,0 +1,46 @@
+<div>
+<form action="" [formGroup]="formCadastro" (submit)="cadastrar()">
+
+<div class="columns">
+  <div class="column is-2"></div>
+  <main class="column is-8">
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <input class="input" type="text" formControlName="nome" placeholder="Digite sua Idade">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Idade</label>
+      <div class="control">
+        <input class="input" type="number" formControlName="idade" placeholder="Digite sua idade">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Sexo</label>
+      <div class="control">
+        <div class="select">
+          <select formControlName="sexo">
+            <option value=""></option>
+            <option value="maculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submeter</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light">Cancelar</button>
+      </div>
+    </div>
+  </main>
+  <div class="column is-2"></div>
+</div>
+</form>
+</div>
